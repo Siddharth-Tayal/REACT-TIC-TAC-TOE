@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+.header {
+  display: flex;
+  height: 13vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  font: 900 2.5vmax cursive;
+  color: orangered;
+  background-color: white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
+  height: 88vh;
+  width: 100vw;
+  background-color: orangered;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 50px;
+}
+.home img {
+  height: 40vh;
+  width: auto;
+  object-fit: contain;
+}
+.home a {
+  height: 50px;
+  background-color: white;
+  color: orangered;
+  text-decoration: none;
+  padding: 1vmax 3vmax;
+  font: 500 1.3vmax Gills-sans;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.home a:hover {
+  opacity: 0.7;
+}
+.page {
+  height: 88vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(0, 94, 255), rgb(138, 5, 168));
+}
+.board {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  gap: 50px;
+}
+.game-board {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(162, 0, 255);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+.row {
+  height: 100px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.squares {
+  height: 80px;
+  width: 80px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(115, 0, 255);
+  /* border-radius: 50%; */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font: 900 2rem cursive;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.squares:hover {
+  opacity: 0.6;
+}
+button {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  height: 50px;
+  width: 250px;
+  background-color: green;
   color: white;
+  font: 700 1.3vmax Gills-sans;
+  border-radius: 6px;
+}
+button:hover {
+  background-color: white;
+  color: green;
+  border: 1px solid green;
 }
 
-.App-link {
-  color: #61dafb;
+/* Footer */
+
+.footer {
+  height: auto;
+  padding: 2vmax 10vmax;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+}
+.founder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vmax;
+}
+.founder img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.footer h2 {
+  font: 500 1.5vmax Gills-sans;
+  color: rgb(29, 92, 147);
+  padding: 1vmax;
+  border-bottom: 1px solid rgb(29, 92, 147);
+}
+.founder h3 {
+  font: 500 1.3vmax cursive;
+  color: rgb(29, 92, 147);
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vmax;
+}
+.links a {
+  font-size: 2vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(29, 92, 147);
+  gap: 1vmax;
+  transition: all 0.5s;
+}
+.links a:hover {
+  color: orangered;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 696px) {
+  .home img {
+    max-width: 320px;
   }
-  to {
-    transform: rotate(360deg);
+  .home a {
+    padding: 1vmax 5vmax;
+  }
+  .footer {
+    padding: 2vmax;
+    gap: 3vmax;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
 }
